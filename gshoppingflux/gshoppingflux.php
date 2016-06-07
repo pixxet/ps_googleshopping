@@ -269,6 +269,7 @@ class GShoppingFlux extends Module
 
 	public function getContent()
 	{
+		ini_set('max_execution_time', 600); // avoiding errors because of low execution time configurations
 		$id_lang = $this->context->language->id;
 		$languages = $this->context->controller->getLanguages();
 		$shops = Shop::getShops(true, null, true);
